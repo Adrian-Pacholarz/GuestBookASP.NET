@@ -1,0 +1,32 @@
+﻿@model GuestBookViewModel
+@{
+    ViewData["Title"] = "Guest Book";
+}
+<h1>@ViewData["Title"]</h1>
+
+@if (Model.allEntries.Count == 0)
+{
+    <text> No one has written an entry yet. </text>
+}
+
+<div class="GuestBookEntries">
+    @foreach (var entry in Model.allEntries)
+    {
+        <ul class="GuestEntry">
+            <li>@entry.message</li>
+            <li><strong>Name: </strong>@entry.name</li>
+            <li><strong>Date: </strong>@entry.date</li>
+        </ul>
+    }
+</div>
+<form class="NewEntry" onsubmit="return validateForm()" method="post">
+    <p><label>Guest entry:</label></p>
+    <p><textarea name="feedback" rows="5" cols="50" placeholder="Tell us something about you!"></textarea></p>
+    <span id="feedbackError"></span>
+    <p><label>Guest name:</label></p>
+    <p><input type="text" name="name" placeholder="Your name" /></p>
+    <span id="nameError"></span>
+    <p><button name="sendButton" type="submit" disabled>Submit</button></p>
+</form>
+<script src="~/js/GuestEntryScript.js"></script>
+
