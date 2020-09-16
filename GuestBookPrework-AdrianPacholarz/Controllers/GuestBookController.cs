@@ -22,8 +22,8 @@ namespace GuestBookPrework_AdrianPacholarz.Controllers
             
             var guestBookwithEntries = new GuestBookViewModel();
 
-            guestBookwithEntries.allEntries.Add(new GuestEntryViewModel("Tu bylem", "Codecooler", new DateTime(2014, 03, 02, 21, 37, 18)));
-            guestBookwithEntries.allEntries.Add(new GuestEntryViewModel("Tutaj nie bylem", "Mentor", new DateTime(2018, 01, 23, 13, 15, 37)));
+            guestBookwithEntries.allEntries.Add(new GuestEntryViewModel("Tu byłem", "Codecooler", new DateTime(2014, 03, 02, 21, 37, 18)));
+            guestBookwithEntries.allEntries.Add(new GuestEntryViewModel("Tutaj nie byłem", "Mentor", new DateTime(2018, 01, 23, 13, 15, 37)));
 
             return guestBookwithEntries;
         }

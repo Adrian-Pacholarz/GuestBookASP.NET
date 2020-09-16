@@ -4,8 +4,6 @@ let feedback = allBoxes[0];
 let name = allBoxes[1];
 let nameError = document.getElementById("nameError");
 let feedbackError = document.getElementById("feedbackError");
-let hiddenComment = document.getElementById("hiddenComment");
-let hiddenName = document.getElementById("hiddenName");
 
 
 let checkBoxes = function () {
